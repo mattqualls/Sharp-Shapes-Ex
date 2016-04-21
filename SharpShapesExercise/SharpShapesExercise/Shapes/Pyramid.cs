@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace SharpShapesExercise.Shapes
 {
-    class Pyramid
+    public class Pyramid : Shape
     {
+        public Pyramid()
+        {
+            this.sides = 5;
+        }
+        public override double calculateVolume()
+        {
+            return (length * width * height) / 3;
+        }
     }
 }
