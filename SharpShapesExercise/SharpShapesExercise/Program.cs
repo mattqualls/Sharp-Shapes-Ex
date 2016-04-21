@@ -73,6 +73,26 @@ namespace SharpShapesExercise
                         Console.WriteLine("The area of this square is {0}.", square.calculateArea());
                         shapeSelected = true;
                         break;
+                    case 4: //Instance when pyramid is selected
+                        Console.WriteLine("");
+                        Console.WriteLine("Enter Length, Width and Height of pyramid, seperated by commas: ");
+                        Console.Write("> ");
+                        dimensions = Console.ReadLine().Split(',');
+                        Pyramid pyramid = new Pyramid();
+                        pyramid.length = Convert.ToDouble(dimensions[0]);
+                        pyramid.width = Convert.ToDouble(dimensions[1]);
+                        pyramid.height = Convert.ToDouble(dimensions[2]);
+                        Console.WriteLine("");
+                        Console.WriteLine("Pyramid with length of {0}, width of {1} and height of {2}", pyramid.length, pyramid.width, pyramid.height);
+                        Console.WriteLine("A pyramid has {0} sides.", pyramid.sides);
+                        Console.WriteLine("The volume of this pyramid is {0}.", pyramid.calculateVolume());
+                        shapeSelected = true;
+                        break;
+                    default:
+                        Console.WriteLine("Invalid choice. Please type a number from the list.");
+                        Console.Write("> ");
+                        Int32.TryParse(Console.ReadLine(), out shapeChoice);
+                        break;
                 }
             }
 
