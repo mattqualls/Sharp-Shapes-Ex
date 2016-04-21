@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace SharpShapesExercise.Shapes
 {
-    class Cylinder
+   public class Cylinder : Shape
     {
+        public Cylinder()
+        {
+            this.sides = 3;
+        }
+        public override double calculateVolume()
+        {
+            return Math.PI * radius * radius * height;
+        }
     }
 }
