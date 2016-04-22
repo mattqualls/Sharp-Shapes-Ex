@@ -74,6 +74,7 @@ namespace SharpShapesExercise
                         shapeSelected = true;
                         break;
                     case 4: //Instance when pyramid is selected
+
                         Console.WriteLine("");
                         Console.WriteLine("Enter Length, Width and Height of pyramid, seperated by commas: ");
                         Console.Write("> ");
@@ -96,6 +97,8 @@ namespace SharpShapesExercise
                 }
             }
 
+            Console.WriteLine("Program finished.  Press any key to exit.");
+            Console.ReadKey();
         }
     }
 }

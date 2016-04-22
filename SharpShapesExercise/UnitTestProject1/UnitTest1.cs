@@ -2,6 +2,8 @@
 
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SharpShapesExercise;
+using SharpShapesExercise.Shapes;
 
 namespace SharpShapeTests
 {
@@ -36,12 +38,12 @@ namespace SharpShapeTests
             Assert.IsInstanceOfType(cylinder, typeof(Cylinder));
         }
 
-        [TestMethod]
-        public void TestCubeType()
-        {
-            Cube cube = new Cube();
-            Assert.IsInstanceOfType(cube, typeof(Cube));
-        }
+       // [TestMethod]
+        //public void TestCubeType()
+       // {
+          //  Cube cube = new Cube();
+          //  Assert.IsInstanceOfType(cube, typeof(Cube));
+       // }
 
         [TestMethod]
         public void TestPyramidType()
@@ -70,18 +72,68 @@ namespace SharpShapeTests
             Assert.IsTrue(simple.calculateArea() == 4);
         }
 
+       // [TestMethod]
+        //public void TestSquareArea()
+        //{
+          //  Square simple = new Square();
+            //square.width = 2;
+            //Assert.IsTrue(square.calculateArea() == 4);
+        //}
+
+      //  [TestMethod]
+        //public void TestCircleArea()
+        //{
+          //  Circle simple = new Circle();
+            //circle.radius = 1;
+            //Assert.IsTrue(circle.calculateArea() == Math.PI);
+        //}
+
+
         [TestMethod]
-        public void TestSquareArea()
+        public void TestCylinderVolume()
         {
-            Square simple = new Square();
-            Assert.IsTrue(square.calculateArea() == 4);
+            Cylinder cylinder = new Cylinder();
+            cylinder.radius = 1;
+            cylinder.height = 5;
+            Assert.IsTrue(cylinder.calculateVolume() == 5 * Math.PI);
         }
 
         [TestMethod]
-        public void TestCircleArea()
+        public void TestPyramidVolume()
         {
-            Circle simple = new Circle();
-            Assert.IsTrue(cirlce.calculateArea() == Math.PI);
+            Pyramid pyramid = new Pyramid();
+            pyramid.length = 1;
+            pyramid.width = 1;
+            pyramid.height = 3;
+            Assert.IsTrue(pyramid.calculateVolume() == 1);
+        }
+
+        [TestMethod]
+        public void TestPyramidSides()
+        {
+            Pyramid pyramid = new Pyramid();
+            Assert.IsTrue(pyramid.sides == 5);
+        }
+
+        [TestMethod]
+        public void TestCircleSides()
+        {
+            Circle circle = new Circle();
+            Assert.IsTrue(circle.sides == 1);
+        }
+
+        [TestMethod]
+        public void TestCylinderSides()
+        {
+            Cylinder cylinder = new Cylinder();
+            Assert.IsTrue(cylinder.sides == 3);
+        }
+
+        [TestMethod]
+        public void TestSquareSides()
+        {
+            Square square = new Square();
+            Assert.IsTrue(square.sides == 4);
         }
     }
 }
