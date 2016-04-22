@@ -17,6 +17,10 @@ namespace SharpShapesExercise
             bool shapeSelected = false;
 
 
+
+            Console.BackgroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.Clear();
             //Console select menu
             Console.WriteLine("");
             Console.WriteLine("Select a shape:");
